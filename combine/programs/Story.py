@@ -1,11 +1,17 @@
 import time
 
-from interface import combine1 as c
+import interface as c
 
 
 def mainb():
-    def quit():
+    def lose():
         c.mainc()
+    def quit():
+        rest=input("You lose the game 'r' to restart 'q' to quit")
+        if rest =="r":
+            mainb()
+        elif rest =="q":
+            lose()
 ###A choice based game where every choice make a difference###
     print("Crypt Walker v1.0\nMade by Fiqhy and Fariz\n########################")
     print("Game is loading...")
@@ -120,17 +126,19 @@ def mainb():
                 print(pron, "quickly decide to...\n1.", c4_a, "\n2.", c4_b)
                 choice4 = input(ins)
                 if choice4 == "1":
-                    print(pron, "finally break the crown,", time.sleep(2),
-                          "\nbut it seems nothing is happening.", time.sleep(1),
+                    time.sleep(5)
+                    print(pron, "finally break the crown,"
+                          "\nbut it seems nothing is happening."
                           "\nUnfortunately, all the soldiers have been killed"
-                          "\nand the ghost is charging at", pron + ".", time.sleep(3),
-                          pron, "lie dead on the ground.","\n", divider, "FAIL"), time.sleep(5)
+                          "\nand the ghost is charging at", pron + ".",
+                          pron, "lie dead on the ground.","\n", divider, "FAIL"), 
                     quit()
                 elif choice4 == "2":
-                    print(pron, "finally stab the corpse's heart,", time.sleep(2),
-                          "\nin a sudden the ghost charges at", pron + ".", time.sleep(3),
+                    time.sleep(5)
+                    print(pron, "finally stab the corpse's heart,"
+                          "\nin a sudden the ghost charges at", pron + "."
                           "\nThe ghost disappears and all the soldiers have been killed.","\n",
-                          divider, "\n","Finally the treasure belongs to", pron, "now.", time.sleep(2),
+                          divider, "\n","Finally the treasure belongs to", pron, "now."
                           "\n--Congratulation you have won the game--"
                           "\nthank you for playing"), time.sleep(5)
                     quit()
@@ -242,23 +250,25 @@ def mainb():
                   "\nand a throne in the center. An ancient corpse sit on the throne,"
                   "\nwith a crown over it's head.",
                   "\nThe soldiers approach the throne while suddenly, a ghost wielding a sword",
-                  "\ncomes out of the corpse and attacked them", "\n"),divider, time.sleep(5)
+                  "\ncomes out of the corpse and attacked them", "\n",divider,), time.sleep(5)
             c4_a = ("take off the crown from the corpse and break it")
             c4_b = ("put a sword on the corpse's chest while aiming for it's heart")
             print(name, "quickly decides to...\n1.", c4_a, "\n2.", c4_b)
             choice4 = input(ins)
             if choice4 == "1":
-                print(name, "finally breaks the crown,",time.sleep(2),
-                            "\nbut it seems nothing is happening.",time.sleep(1),
+                time.sleep(5)
+                print(name, "finally breaks the crown,"
+                            "\nbut it seems nothing is happening."
                             "\nUnfortunately, the all the soldiers have been killed"
-                            "\nand the ghost is charging at",name+".",time.sleep(3),
+                            "\nand the ghost is charging at",name+".",
                             name,"lies dead on the ground.", "\n",divider,"\n","FAIL"), time.sleep(5)
                 quit()
             elif choice4 == "2":
+                time.sleep(5)
                 print(name, "finally stabs the corpse's heart,"
                             "\nin a sudden the ghost charges at",name+".","\n",
                             "\nThe ghost disappears and all the soldiers have been killed."
-                            ,"\n",divider,"\n","Finally the treasure belongs to",name,"now.","\n",time.sleep(2),
+                            ,"\n",divider,"\n","Finally the treasure belongs to",name,"now."
                             "\n--Congratulation you have won the game--"
                             "\nthank you for playing"), time.sleep(5)
                 quit()
